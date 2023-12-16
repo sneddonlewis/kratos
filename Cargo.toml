@@ -19,7 +19,7 @@ name = "frontend"
 path = ".cargo/bin/frontend.rs"
 
 [[bin]]
-name = "muscle-machine"
+name = "kratos"
 path = "backend/main.rs"
 
 [dependencies]
@@ -60,9 +60,9 @@ features = ["actix_extras", "chrono", "openapi_extensions"]
 version = "3"
 
 [package]
-default-run = "muscle-machine"
+default-run = "kratos"
 edition = "2021"
-name = "muscle-machine"
+name = "kratos"
 publish = false
 version = "0.1.0"
 

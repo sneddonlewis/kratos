@@ -1864,6 +1864,27 @@ dependencies = [
 ]
 
 [[package]]
+name = "kratos"
+version = "0.1.0"
+dependencies = [
+ "actix-files",
+ "actix-http",
+ "actix-multipart",
+ "actix-web",
+ "chrono",
+ "create-rust-app",
+ "diesel",
+ "dsync",
+ "futures-util",
+ "serde",
+ "serde_json",
+ "tokio",
+ "tsync",
+ "utoipa",
+ "utoipa-swagger-ui",
+]
+
+[[package]]
 name = "language-tags"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2070,27 +2091,6 @@ dependencies = [
  "log",
  "wasi",
  "windows-sys 0.48.0",
-]
-
-[[package]]
-name = "muscle-machine"
-version = "0.1.0"
-dependencies = [
- "actix-files",
- "actix-http",
- "actix-multipart",
- "actix-web",
- "chrono",
- "create-rust-app",
- "diesel",
- "dsync",
- "futures-util",
- "serde",
- "serde_json",
- "tokio",
- "tsync",
- "utoipa",
- "utoipa-swagger-ui",
 ]
 
 [[package]]

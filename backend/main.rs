@@ -52,7 +52,9 @@ async fn main() -> std::io::Result<()> {
         }
 
         app = app.service(api_scope);
-        app = app.default_service(web::get().to(create_rust_app::render_views));
+        app = app.default_service(
+            actix_files::Files::new("/", "./frontend/dist/frontend/browser").index_file("index.html")
+        );
         app
     }).bind("0.0.0.0:3000")?.run().await
 }
