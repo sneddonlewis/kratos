@@ -13,7 +13,7 @@ RUN apk --no-cache add --update nodejs npm libc-dev openssl-dev libpq-dev
 WORKDIR /app
 COPY . .
 # note: this also builds the frontend (see `build.rs`)
-RUN cargo build --release --bin muscle-machine --target x86_64-unknown-linux-musl
+RUN cargo build --release --bin kratos --target x86_64-unknown-linux-musl
 
 #
 # Step 2: create an image just containing the compiled app and static assets
@@ -22,9 +22,9 @@ FROM alpine:latest
 WORKDIR /app
 COPY --from=build /app /appPtr
 RUN ls -lha /appPtr
-COPY --from=build /app/.cargo/.build/release/muscle-machine /app/muscle-machine
+COPY --from=build /app/.cargo/.build/release/kratos /app/kratos
 COPY --from=build /app/frontend/dist /app/frontend/dist
 
 EXPOSE 3000
 
-CMD ["muscle-machine"]
+CMD ["kratos"]
